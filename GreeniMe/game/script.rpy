@@ -113,10 +113,73 @@ label scene6:
     r "Should we use extra blankets and wear warmer clothes? It’s a good way to save energy, but it might not be as instantly comfortable."
     pause 0.6
     r "Or should we turn up the heater? It will make the house warm quickly, but ituses more energy and increases our carbon footprint."
-
         menu:
         "1. Using Extra Blankets:":
             jump scene7
         "2. Turning Up the Heater":
             jump scene7
 
+label scene7:
+    "As she aproaches the cupboard, she notices there are a lot of un-used clothes"
+    pause 0.6
+    r "Auntie, we have a lot of clothes we don’t wear anymore. What should we do with them?"
+
+    pause 0.6
+    r "Should we donate the clothes to a local charity? It helps others and reduces waste, but it might take some effort to sort and deliver them."
+    pause 0.6
+    r "Or should we just throw them away? It’s easier and quicker, but it adds to landfill waste."
+        menu:
+        "1. Donating Clothes:":
+            jump scene8
+        "2. Throwing Clothes Away":
+            jump scene8
+
+label scene8:
+    "Once done with comforting themselves, they are having their dinner and Reyna notices that some food is being wasted"
+    pause 0.6
+    r "Auntie, I noticed we throw away a lot of food scraps. What can we do to be more environmentally friendly?"
+
+    pause 0.6
+    r "Should I suggest starting a compost bin to recycle our food scraps into nutrient-rich soil for our garden? It might be a bit of work, but it sounds beneficial."
+    pause 0.6
+    r "Or should we just keep throwing the scraps away like we always do? It's easier and takes less time."
+        menu:
+        "1. Starting a Compost Bin":
+            jump scene9
+        "2. Throwing Scraps Away":
+            jump scene9
+label scene9:
+    "After finishing their dinner, Reyna has the habit of washing her own plates. In the kitchen she finds the light flickering."
+    pause 0.6
+    r "Auntie, the kitchen light is flickering. What should we do about it?"
+
+    pause 0.6
+    r "Should we replace the old bulb with an LED one? It uses less energy and lasts longer, but it's more expensive as you told me while we went for shopping."
+    pause 0.6
+    r "Or should we use a regular bulb? It’s cheaper initially, but it uses more energy and doesn’t last as long."
+        menu:
+        "1. Replacing with LED Bulbs":
+            jump scene10
+        "2. . Using a Regular Bulb":
+            jump scene10
+
+label scene10:
+    "Reyna after her dinner, she feels bored. So she asks her aunt to suggest some books but she is finding difficulty in deciding one"
+
+
+
+    pause 0.6
+    "Auntie, I want to read a new book. What’s the best way to get one?"
+
+    pause 0.6
+    r "Aunty suggests to  borrow a book from the library as it’s free and eco-friendly."
+
+    pause 0.6
+    r "Or she asks me to  buy a new book from the store? It’s nice to own my own books, but it uses more resources and money."
+
+
+        menu:
+        "1. Replacing with LED Bulbs":
+            jump scene11
+        "2. . Using a Regular Bulb":
+            jump scene11
