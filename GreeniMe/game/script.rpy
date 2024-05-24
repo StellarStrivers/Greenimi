@@ -135,19 +135,20 @@ label scene7:
             jump scene8
 
 label scene8:
-    "Once done with comforting themselves, they are having their dinner and Reyna notices that some food is being wasted"
+    "Reyna found a lot of bottles in her storeroom"
     pause 0.6
-    r "Auntie, I noticed we throw away a lot of food scraps. What can we do to be more environmentally friendly?"
+    r "I've got so much stuff, Auntie! It's time to get them sorted out. But what should I do with them?"
+    pause 0.6
+    r "Auntie says we can send our plastic bowtles for recycling. It's good for the environment because they can be turned into new things. But is it worth the effort, and will they really get recycled?"
+    pause 0.6
+    r "Or I could keep using the plastic bowtles we already have. Auntie says it's good to reuse things, and it saves energy. But what if they end up in the trash anyway?"
+    pause 0.5
+    menu:
+        "Sending Plastic Bottles for Recycling":
+            jump scene9
+        "Reusing Plastic bottles":
+            jump scene9
 
-    pause 0.6
-    r "Should I suggest starting a compost bin to recycle our food scraps into nutrient-rich soil for our garden? It might be a bit of work, but it sounds beneficial."
-    pause 0.6
-    r "Or should we just keep throwing the scraps away like we always do? It's easier and takes less time."
-        menu:
-        "1. Starting a Compost Bin":
-            jump scene9
-        "2. Throwing Scraps Away":
-            jump scene9
 label scene9:
     "After finishing their dinner, Reyna has the habit of washing her own plates. In the kitchen she finds the light flickering."
     pause 0.6
@@ -164,9 +165,7 @@ label scene9:
             jump scene10
 
 label scene10:
-    "Reyna after her dinner, she feels bored. So she asks her aunt to suggest some books but she is finding difficulty in deciding one"
-
-
+    "Reyna after her dinner feels bored. So she asks her aunt to suggest some books but she is finding difficulty in making a better choice"
 
     pause 0.6
     "Auntie, I want to read a new book. What’s the best way to get one?"
@@ -176,10 +175,12 @@ label scene10:
 
     pause 0.6
     r "Or she asks me to  buy a new book from the store? It’s nice to own my own books, but it uses more resources and money."
-
-
-        menu:
-        "1. Replacing with LED Bulbs":
+    pause 0.5
+    menu:
+        "1. Borrow a book":
             jump scene11
-        "2. . Using a Regular Bulb":
+        "2. Buy a new book":
             jump scene11
+
+label scene11:
+    
