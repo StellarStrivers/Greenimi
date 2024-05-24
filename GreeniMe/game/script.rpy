@@ -183,4 +183,6 @@ label scene10:
             jump scene11
 
 label scene11:
+    "Reyna and her Aunt decide to challenge themselves to reduce their waste to zero"
+    pause 0.6
     
