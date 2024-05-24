@@ -276,4 +276,33 @@ label scene16:
 
 
 label scene17:
+    "Reyna is in her room, trying to draw"
+    pause 0.6
+    r "I love drawing, but I use so much paper. Auntie, how can I make my hobby more eco-friendly?"
+    pause 0.6
+    r "Should I start using recycled paper for my drawings? Itʼs better for the environment, even if itʼs a bit more expensive."
+    pause 0.6
+    r "Or should I continue using the regular paper we already have? Itʼs cheaper and more convenient."
+    pause 0.6
+    menu:
+        "1. Switching to Recycled Paper":
+            jump scene18
+        "2. Using Regular Paper":
+            jump scene18
+    
+label scene18:
+    "Reyna is in the hall, which is getting chilly recently"
+    pause 0.6
+    r  "Auntie, our house is getting chilly. How should we keep warm without using too much energy?"
+    pause 0.6
+    r "Should we use extra blankets and wear warmer clothes? Itʼs a good way to save energy, but it might not be as instantly comfortable."
+    pause 0.6
+    r  "Or should we turn up the heater? It will make the house warm quickly, but it uses more energy and increases our carbon footprint."
+    menu:
+        "1. Using Extra Blankets":
+            jump scene19
+        "2. Turning Up the Heater":
+            jump scene19
+
+label scene19:
     
