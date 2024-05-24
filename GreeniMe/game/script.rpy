@@ -86,7 +86,37 @@ label scene4:
     r "Or I could keep using the plastic bags we already have. Auntie says it's good to reuse things, and it saves money. It also makes use of things I already have instead of wasting them. But is it really better for the planet now?"
     pause 0.6
     menu:
-        "1.Buying a Tote Bag":
+        "1. Buying a Tote Bag":
             jump scene5
         "2. Reusing Plastic Bags":
             jump scene5
+
+label scene5:
+    "On their way, Reyna feels hungry"
+    pause 0.6
+    r "Auntiee, what's the best way to have a quick snack?"
+    pause 0.6
+    r "should I eat a pre-packaged snack? It’s quick and convenient, but it usually comes with a lot of plastic waste."
+    pause 0.6
+    r "Should I make a snack from scratch with fresh ingredients? It’s healthier and has less packaging, but it takes more time."
+        menu:
+        "1. Eating Packaged Snacks":
+            jump scene6
+        "2. Making a Homemade Snack":
+            jump scene6
+
+label scene6:
+    "Back at their home"
+    pause 0.6
+    r "Auntie, our house is getting chilly. How should we keep warm without using too much energy?"
+    pause 0.6
+    r "Should we use extra blankets and wear warmer clothes? It’s a good way to save energy, but it might not be as instantly comfortable."
+    pause 0.6
+    r "Or should we turn up the heater? It will make the house warm quickly, but ituses more energy and increases our carbon footprint."
+
+        menu:
+        "1. Using Extra Blankets:":
+            jump scene7
+        "2. Turning Up the Heater":
+            jump scene7
+
