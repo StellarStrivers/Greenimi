@@ -9,6 +9,7 @@ label start:
     show reyna  
     "As the sun painted the city in warm shades, a small child was running along the house, helping her parents to pack"
     pause 0.6
+    scene bg apartment
     "Meet Reyna, a 10 year old child preparing to move to her Aunt's house, in a small town near the edges of Elmwood trail"
     pause 0.6
     "But her Aunt isn't what meets the eye. Aunt Camilla is a soul loved by fairies"
