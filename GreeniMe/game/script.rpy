@@ -5,8 +5,8 @@
 define r = Character(name="Reyna", image="")
 
 label start:
-    #scene bg
-    show reyna  
+    scene bg city
+    show reyna sad at left
     "As the sun painted the city in warm shades, a small child was running along the house, helping her parents to pack"
     pause 0.6
     scene bg apartment
@@ -99,7 +99,7 @@ label scene5:
     r "should I eat a pre-packaged snack? It’s quick and convenient, but it usually comes with a lot of plastic waste."
     pause 0.6
     r "Should I make a snack from scratch with fresh ingredients? It’s healthier and has less packaging, but it takes more time."
-        menu:
+    menu:
         "1. Eating Packaged Snacks":
             jump scene6
         "2. Making a Homemade Snack":
@@ -113,7 +113,7 @@ label scene6:
     r "Should we use extra blankets and wear warmer clothes? It’s a good way to save energy, but it might not be as instantly comfortable."
     pause 0.6
     r "Or should we turn up the heater? It will make the house warm quickly, but ituses more energy and increases our carbon footprint."
-        menu:
+    menu:
         "1. Using Extra Blankets:":
             jump scene7
         "2. Turning Up the Heater":
@@ -128,7 +128,7 @@ label scene7:
     r "Should we donate the clothes to a local charity? It helps others and reduces waste, but it might take some effort to sort and deliver them."
     pause 0.6
     r "Or should we just throw them away? It’s easier and quicker, but it adds to landfill waste."
-        menu:
+    menu:
         "1. Donating Clothes:":
             jump scene8
         "2. Throwing Clothes Away":
@@ -158,7 +158,7 @@ label scene9:
     r "Should we replace the old bulb with an LED one? It uses less energy and lasts longer, but it's more expensive as you told me while we went for shopping."
     pause 0.6
     r "Or should we use a regular bulb? It’s cheaper initially, but it uses more energy and doesn’t last as long."
-        menu:
+    menu:
         "1. Replacing with LED Bulbs":
             jump scene10
         "2. . Using a Regular Bulb":
@@ -185,4 +185,3 @@ label scene10:
 label scene11:
     "Reyna and her Aunt decide to challenge themselves to reduce their waste to zero"
     pause 0.6
-    
