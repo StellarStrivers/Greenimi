@@ -232,4 +232,48 @@ label scene13:
 label scene14:
     "Reyna just washed her own clothes today, now she has a dilemma"
     pause 0.6
-    r 
+    r "I just now washed my clothes as Aunt guided me. What is the next step?"
+    pause 0.6
+    r "should I start using a clothesline to dry our clothes? But what if it's raining or takes too long?"
+    pause 0.6
+    r "Or should I stick to using the dryer? It's faster and more convenient."
+    pause 0.5
+    menu:
+        "Use Clothesline":
+            jump scene15
+        "Use Dryer":
+            jump scene15
+
+label scene15:
+    "Reyna noticed a lot of water being evicted from the washing machine"
+    pause 0.6
+    r " But while washing, I noticed enormous amount of water being wasted,  What should I do to overcome this?"
+    pause 0.6
+    r "I remember Aunty telling me about something like low water using faucets and machines, should we buy those? But how much do they cost anyways?"
+    pause 0.6
+    r "Or can I pour this water to the little plants along the house?"
+    pause 0.6
+    menu:
+        "1. Install Low Water Faucets and Machines":
+            jump scene16
+        "2. Water for Plants":
+            jump scene16
+        
+label scene16:
+    "Reyna is watching a heavy downpour outside her house"
+    pause 0.6
+    r "Awwww I can feel the smell of rain and yeah it started to pour all of a sudden. We get enormous water thru rain, right? How should we save this?"
+    pause 0.6
+    r "Should I install something called rainwater harvesting system with my aunt in our house??"
+    pause 0.6
+    r "Or can I ask Aunty to mark a common point to use buckets for storing rainwater whenever it rains??"
+    pause 0.6
+    menu:
+        "1. Rainwater Harvesting System":
+            jump scene17
+        "2. Use Buckets":
+            jump scene17
+
+
+label scene17:
+    
