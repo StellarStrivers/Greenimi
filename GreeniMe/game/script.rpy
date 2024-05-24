@@ -185,3 +185,51 @@ label scene10:
 label scene11:
     "Reyna and her Aunt decide to challenge themselves to reduce their waste to zero"
     pause 0.6
+    r "Auntie, can we try to make zero waste? I want to see if we can do it!"
+    pause 0.6
+    r "We could use reusable containers instead of disposable ones. Auntie says it reduces waste and saves money in the long run. But will it be inconvenient?"
+    pause 0.6
+    "Or we could buy products that don't have any packaging. Auntie says it's better for the environment, but it might be hard to find everything we need. What should we do?"
+    pause 0.5
+    menu:
+        "Using Reusable Containers":
+            jump scene12
+        "Buying Package-Free Products":
+            jump scene12
+
+label scene12:
+    "Reyna and her Aunt,along with her friends visited the local beach"
+    pause 0.6
+    r "I'm so excited to come to the beach with Auntie and my friends! I can't wait to see the turtles. But there are no turtles, just lots and lots of trash everywhere. Auntie, what should I do?"
+    pause 0.6
+    r "Should I take the initiative and clean the beach so that the next time when I visit the beach I can meet the turtles? But will my friends join hands with me in this cleaning?"
+    pause 0.6
+    r  "Maybe I can continue to play with my friends; that's the best thing I can do."
+    pause 0.5
+    menu:
+        "1. Cleaning Up the Beach":
+            jump scene13
+        "2. Continue to Play":
+            jump scene13
+
+label scene13:
+
+
+    "Reyna and her Aunt are in the hall early in the morning"
+    pause 0.6
+    r "I've been thinking, Auntie. What if we switch to digital versions of newspapers, magazines, and books?"
+    pause 0.6
+    r "Should we start using digital versions? It's eco-friendly and convenient."
+    pause 0.6
+    r "Or should we stick with print? Some like the physical feel, but it wastes paper."
+    pause 0.6
+    menu:
+        "1. Go Digital":
+            jump scene14
+        "2. Stick with Print":
+            jump scene14
+
+label scene14:
+    "Reyna just washed her own clothes today, now she has a dilemma"
+    pause 0.6
+    r 
