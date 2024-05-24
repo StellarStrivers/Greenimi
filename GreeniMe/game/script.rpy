@@ -2,7 +2,7 @@
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
-define r = Character(name="Reyna", image="")
+define r = Character(name="Reyna", image="reyna")
 
 label start:
     scene bg city
@@ -31,9 +31,9 @@ label start:
         
     
 label scene1:
-
+    scene bg hall
     "The living room, with sunlight streaming through the windows."
-    
+    show reyna sad at right
     r "Auntie, I read about eco-friendly transportation alternatives. Should we consider biking or using public transportation more?"
     pause 0.6
     r "Let's start biking more often for short trips. Auntie says it's good for our health, reduces emissions, and saves money on gas. But what about safety concerns?"
@@ -48,6 +48,8 @@ label scene1:
             jump scene2
 
 label scene2:
+    scene bg stationary
+    show reyna sad at left
     "It's time to buy school supplies, Reyna went to the store with Aunt Camilla"
     pause 0.7
     r "Aunty, I'm surprised to see so many kinds of pencils in this store. I'm confused about which one to pick."
@@ -63,6 +65,8 @@ label scene2:
             jump scene3
 
 label scene3:
+    scene bg kitchen
+    show reyna sad at right
     "Reyna and her Aunt decide to start composting but aren't sure what to compost."
     pause 0.6
     r "Auntie, what can we put in the compost bin? I want to make sure we're doing it right."
@@ -77,6 +81,8 @@ label scene3:
             jump scene4
 
 label scene4:
+    scene bg foresty
+    show reyna sad at left
     "Reyna is out on a walk with her Aunt, when she gets a doubt"
     pause 0.6
     r "I want to be good to the planet, but I'm not sure what to do about my bags. What's the best way to carry my stuff, Auntie?"
@@ -92,6 +98,8 @@ label scene4:
             jump scene5
 
 label scene5:
+    scene bg shop
+    show reyna sad at right
     "On their way, Reyna feels hungry"
     pause 0.6
     r "Auntiee, what's the best way to have a quick snack?"
@@ -106,8 +114,11 @@ label scene5:
             jump scene6
 
 label scene6:
+    scene bg aunt_home
+    show reyna sad at left
     "Back at their home"
     pause 0.6
+    scene bg hall
     r "Auntie, our house is getting chilly. How should we keep warm without using too much energy?"
     pause 0.6
     r "Should we use extra blankets and wear warmer clothes? It’s a good way to save energy, but it might not be as instantly comfortable."
@@ -120,6 +131,8 @@ label scene6:
             jump scene7
 
 label scene7:
+    scene bg clothes
+    show reyna sad at right
     "As she aproaches the cupboard, she notices there are a lot of un-used clothes"
     pause 0.6
     r "Auntie, we have a lot of clothes we don’t wear anymore. What should we do with them?"
@@ -135,6 +148,8 @@ label scene7:
             jump scene8
 
 label scene8:
+    scene bg bottles
+    show reyna sad at left
     "Reyna found a lot of bottles in her storeroom"
     pause 0.6
     r "I've got so much stuff, Auntie! It's time to get them sorted out. But what should I do with them?"
@@ -150,6 +165,8 @@ label scene8:
             jump scene9
 
 label scene9:
+    scene bg dinner_kitchen
+    show reyna sad at right
     "After finishing their dinner, Reyna has the habit of washing her own plates. In the kitchen she finds the light flickering."
     pause 0.6
     r "Auntie, the kitchen light is flickering. What should we do about it?"
@@ -165,6 +182,8 @@ label scene9:
             jump scene10
 
 label scene10:
+    #scene
+    show reyna sad at left
     "Reyna after her dinner feels bored. So she asks her aunt to suggest some books but she is finding difficulty in making a better choice"
 
     pause 0.6
@@ -183,6 +202,8 @@ label scene10:
             jump scene11
 
 label scene11:
+    scene bg hall
+    show reyna sad at right
     "Reyna and her Aunt decide to challenge themselves to reduce their waste to zero"
     pause 0.6
     r "Auntie, can we try to make zero waste? I want to see if we can do it!"
@@ -198,6 +219,8 @@ label scene11:
             jump scene12
 
 label scene12:
+    scene bg before_beach
+    show reyna sad at left
     "Reyna and her Aunt,along with her friends visited the local beach"
     pause 0.6
     r "I'm so excited to come to the beach with Auntie and my friends! I can't wait to see the turtles. But there are no turtles, just lots and lots of trash everywhere. Auntie, what should I do?"
@@ -208,12 +231,15 @@ label scene12:
     pause 0.5
     menu:
         "1. Cleaning Up the Beach":
+            scene bg after_beach
+            r "It feels so refreshing to clean this place up!"
             jump scene13
         "2. Continue to Play":
             jump scene13
 
 label scene13:
-
+    scene bg hall
+    show reyna sad at right
 
     "Reyna and her Aunt are in the hall early in the morning"
     pause 0.6
@@ -230,6 +256,8 @@ label scene13:
             jump scene14
 
 label scene14:
+    scene bg wash
+    show reyna sad at left
     "Reyna just washed her own clothes today, now she has a dilemma"
     pause 0.6
     r "I just now washed my clothes as Aunt guided me. What is the next step?"
@@ -245,6 +273,8 @@ label scene14:
             jump scene15
 
 label scene15:
+    scene bg wash
+    show reyna sad at right
     "Reyna noticed a lot of water being evicted from the washing machine"
     pause 0.6
     r " But while washing, I noticed enormous amount of water being wasted,  What should I do to overcome this?"
@@ -260,6 +290,7 @@ label scene15:
             jump scene16
         
 label scene16:
+
     "Reyna is watching a heavy downpour outside her house"
     pause 0.6
     r "Awwww I can feel the smell of rain and yeah it started to pour all of a sudden. We get enormous water thru rain, right? How should we save this?"
@@ -291,18 +322,17 @@ label scene17:
             jump scene18
     
 label scene18:
-    "Reyna is in the hall, which is getting chilly recently"
+    "Reyna is in her room plannning to decorate it to suit her aesthetics"
     pause 0.6
-    r  "Auntie, our house is getting chilly. How should we keep warm without using too much energy?"
+    r "Auntie, I want to decorate my room. Whatʼs the best way to do it sustainably?"
     pause 0.6
-    r "Should we use extra blankets and wear warmer clothes? Itʼs a good way to save energy, but it might not be as instantly comfortable."
+    r  "Should I upcycle old items and turn them into decorations? Itʼs creative and eco-friendly, but it requires more effort and imagination."
     pause 0.6
-    r  "Or should we turn up the heater? It will make the house warm quickly, but it uses more energy and increases our carbon footprint."
+    r "Or should I buy new decorations from the store? Itʼs easier and faster, but itʼs not as good for the environment."
+    pause 0.5
     menu:
-        "1. Using Extra Blankets":
+        "1. Upcycling Old Items": 
             jump scene19
-        "2. Turning Up the Heater":
+        "2.  Buying New Decorations":
             jump scene19
-
 label scene19:
-    
