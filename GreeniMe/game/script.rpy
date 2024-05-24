@@ -2,32 +2,30 @@
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
-
-define e = Character("Eileen")
-
-
-# The game starts here.
+define r = Character(name="Reyna", image="")
 
 label start:
-
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
-    scene bg room
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
-    show eileen happy
-
-    # These display lines of dialogue.
-
-    e "You've created a new Ren'Py game."
-
-    e "Once you add a story, pictures, and music, you can release it to the world!"
-
-    # This ends the game.
-
-    return
+    #scene bg
+    show reyna  
+    "As the sun painted the city in warm shades, a small child was running along the house, helping her parents to pack"
+    pause 0.6
+    "Meet Reyna, a 10 year old child preparing to move to her Aunt's house, in a small town near the edges of Elmwood trail"
+    pause 0.6
+    "But her Aunt isn't what meets the eye. Aunt Camilla is a soul loved by fairies"
+    pause 0.6
+    "She goes on adventures to meet her fairy friends during the winter solstice"
+    pause 0.6
+    "Reyna wishes to accompany her aunt to meet the fairies this winter solstice"
+    pause 0.6
+    "But, to do that Reyna first needs to increase her nature affinity"
+    pause 0.6
+    "This can be done by being sustainable. But Reyna isn't sure what it means to be sustainable"
+    pause 0.6
+    "Are you willing to help Reyna understand sustainability and meet the fairies?"
+    menu:
+        "yes!":
+            jump scene1
+        "no":
+            return
+        
+    
