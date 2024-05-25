@@ -182,7 +182,7 @@ label scene9:
             jump scene10
 
 label scene10:
-    #scene
+    scene bg room_night
     show reyna sad at left
     "Reyna after her dinner feels bored. So she asks her aunt to suggest some books but she is finding difficulty in making a better choice"
 
@@ -290,7 +290,9 @@ label scene15:
             jump scene16
         
 label scene16:
-
+    scene bg rain
+    
+    show reyna img at left
     "Reyna is watching a heavy downpour outside her house"
     pause 0.6
     r "Awwww I can feel the smell of rain and yeah it started to pour all of a sudden. We get enormous water thru rain, right? How should we save this?"
@@ -307,6 +309,8 @@ label scene16:
 
 
 label scene17:
+    scene bg art
+    show reyna sad at left
     "Reyna is in her room, trying to draw"
     pause 0.6
     r "I love drawing, but I use so much paper. Auntie, how can I make my hobby more eco-friendly?"
@@ -316,13 +320,16 @@ label scene17:
     r "Or should I continue using the regular paper we already have? Itʼs cheaper and more convenient."
     pause 0.6
     menu:
-        "1. Switching to Recycled Paper":
+        "1. Switching to Recycled Papesr":
             jump scene18
         "2. Using Regular Paper":
             jump scene18
     
 label scene18:
+    scene bg room_day
+    
     "Reyna is in her room plannning to decorate it to suit her aesthetics"
+    show reyna sad at right
     pause 0.6
     r "Auntie, I want to decorate my room. Whatʼs the best way to do it sustainably?"
     pause 0.6
@@ -337,7 +344,10 @@ label scene18:
             jump scene19
 
 label scene19:
+    scene bg room_night
+    
     "By the end of the day, aunt gives her another book with fairy stories and she wants to meet fairies "
+    show reyna happy at left
     pause 0.6
     r "I wish I could meet these fairies someday"
     pause 0.6
@@ -353,7 +363,9 @@ label scene19:
 
 label scene20:
 
+    scene bg foresty
     "As Reyna is deeply fascinated by fairies, she asks her aunt how to meet them"
+    show reyna img at right
     r " As I become more intrigued by the idea of meeting fairies, I wonder how I can incorporate sustainable 
     living into our quest for magical encounters. What steps can I take to ensure our adventures are eco-friendly?"
     pause 0.6
@@ -367,6 +379,8 @@ label scene20:
         jump scene21
         " Pursue fairies without regard for nature"
         jump scene21
+
 label scene21
+    scene bg scene_21
     "Reyna is still on her quest to increase her nature affinity by living sustainably. You can meet Reyna and help her on her quest soon, stay tuned!"
     return
