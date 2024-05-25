@@ -335,4 +335,38 @@ label scene18:
             jump scene19
         "2.  Buying New Decorations":
             jump scene19
+
 label scene19:
+    "By the end of the day, aunt gives her another book with fairy stories and she wants to meet fairies "
+    pause 0.6
+    r "I wish I could meet these fairies someday"
+    pause 0.6
+    r " could I try casting a magic spell?"
+    pause 0.6
+    r "Or I could make a wish on a star at night?"
+
+    menu
+        "cast a magic spell"
+        jump scene20
+        "wish on a star"
+        jump scene10
+
+label scene20:
+
+    "As Reyna is deeply fascinated by fairies, she asks her aunt how to meet them"
+    r " As I become more intrigued by the idea of meeting fairies, I wonder how I can incorporate sustainable 
+    living into our quest for magical encounters. What steps can I take to ensure our adventures are eco-friendly?"
+    pause 0.6
+    r "Should I emphasize the importance of respecting nature's habitat and avoiding any actions that could harm the environment while searching for fairies. It's essential to prioritize conservation and sustainability in our quest."
+    pause 0.6
+    r " or should I pursue our quest to meet fairies without considering the impact on the environment. After all, fairies are magical beings, and our focus should be solely on finding them, regardless of environmental concerns"
+    pause 0.6
+
+    menu
+        " Respect nature's habit to meet fairies"
+        jump scene21
+        " Pursue fairies without regard for nature"
+        jump scene21
+label scene21
+    "Reyna is still on her quest to increase her nature affinity by living sustainably. You can meet Reyna and help her on her quest soon, stay tuned!"
+    return
