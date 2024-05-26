@@ -119,6 +119,8 @@ label scene6:
     "Back at their home"
     pause 0.6
     scene bg hall
+    
+    show reyna sad at left
     r "Auntie, our house is getting chilly. How should we keep warm without using too much energy?"
     pause 0.6
     r "Should we use extra blankets and wear warmer clothes? It’s a good way to save energy, but it might not be as instantly comfortable."
@@ -232,6 +234,7 @@ label scene12:
     menu:
         "1. Cleaning Up the Beach":
             scene bg after_beach
+            show reyna sad at left
             r "It feels so refreshing to clean this place up!"
             jump scene13
         "2. Continue to Play":
@@ -355,11 +358,11 @@ label scene19:
     pause 0.6
     r "Or I could make a wish on a star at night?"
 
-    menu
-        "cast a magic spell"
-        jump scene20
-        "wish on a star"
-        jump scene10
+    menu:
+        "cast a magic spell":
+            jump scene20
+        "wish on a star":
+            jump scene20
 
 label scene20:
 
@@ -374,13 +377,13 @@ label scene20:
     r " or should I pursue our quest to meet fairies without considering the impact on the environment. After all, fairies are magical beings, and our focus should be solely on finding them, regardless of environmental concerns"
     pause 0.6
 
-    menu
-        " Respect nature's habit to meet fairies"
-        jump scene21
-        " Pursue fairies without regard for nature"
-        jump scene21
+    menu:
+        " Respect nature's habit to meet fairies":
+            jump scene21
+        " Pursue fairies without regard for nature":
+            jump scene21
 
-label scene21
-    scene bg scene_21
+label scene21:
+    scene bg room_night 
     "Reyna is still on her quest to increase her nature affinity by living sustainably. You can meet Reyna and help her on her quest soon, stay tuned!"
     return
