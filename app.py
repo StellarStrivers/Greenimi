@@ -52,6 +52,18 @@ def login():
             return render_template("home_loggedin.html", login=logins, points= user.points)
     return render_template("login.html")
 
+@app.route("/shop")
+def shop():
+    user = session.get("user")
+    points = user.points if user else 0
+    return render_template("monshop.html", points=points)
+
+@app.route("/tracker")
+def tracker():
+    user = session.get("user")
+    points = user.points if user else 0
+    return render_template("tracker.html", points=points)
+
 
 @app.route('/logout')
 def logout():
