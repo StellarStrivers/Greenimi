@@ -3,7 +3,6 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, LoginManager, login_user, login_required, current_user
 from flask_session import Session
 
-
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "AtigyiUS9812892024IKOSNJSGDU"
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db.sqlite"
@@ -27,11 +26,9 @@ db.init_app(app)
 with app.app_context():
     db.create_all()
 
-
 @login_manager.user_loader
 def user_load(user_id):
     return Users.query.get(int(user_id))
-
 
 @app.route("/")
 def home():
@@ -40,6 +37,7 @@ def home():
 @app.route("/home")
 def homes():
     return render_template("home_loggedin.html")
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -50,22 +48,18 @@ def login():
             session["user"]= user.points
             logins= True
             return render_template("home_loggedin.html", login=logins, points= user.points)
-    return render_template("login.html")
-
+        return render_template("login.html")
 @app.route("/shop")
 @login_required
 def shop():
     points = current_user.points
     return render_template("monshop.html", points=points)
 
-
 @app.route("/tracker")
 @login_required
 def tracker():
     points = current_user.points
     return render_template("tracker.html", points=points)
-
-
 
 @app.route('/logout')
 def logout():
@@ -81,12 +75,13 @@ def signup():
         email = request.form.get("email")
         password = request.form.get("password")
         points = 100
-        user = Users(name=name, email=email, username=username, password=password, points=points)
+        user = Users(name=name, email=email, username=username, password=password,
+points=points)
         db.session.add(user)
         db.session.commit()
         return render_template("home_loggedin.html")
     return render_template("signup.html")
 
-
 if __name__ == "__main__":
     app.run(debug="True")
+

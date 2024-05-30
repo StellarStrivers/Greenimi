@@ -1,180 +1,196 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TRACKER-GREENIMI</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <style type="text/css">
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      text-decoration: none;
-    }
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #edf6f9;
-    }
-    .navbar {
-      background: #F7D9B1;
-      font-family: PaleCornflowerBlue;
-      padding: 10px 15px;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .logo a {
-      font-size: 35px;
-      font-weight: 600;
-      color: #285430;
-      text-decoration: none;
-    }
-    .nav-links {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-grow: 1;
-    }
-    .nav-links a {
-      color: #894949;
-      font-size: 20px;
-      font-weight: bold;
-      margin: 0 60px;
-    }
-    .button-wrapper {
-      display: flex;
-      align-items: center;
-    }
-    button {
-      background-color: #e8d7c7;
-      margin-left: 50px;
-      border-radius: 10px;
-      padding: 10px;
-      width: 90px;
-    }
-    button a {
-      color: #6d7a71;
-      font-weight: bold;
-      font-size: 15px;
-    }
-    hr.dashed {
-      border: none;
-      border-top: 10px dashed brown;
-      height: 0;
-      margin: 20px 0;
-    }
-    .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 20px;
-      background-color: white;
-      padding: 20px;
-    }
-    .image {
-      margin-left: 20px;
-      float: right;
-    }
-    .image img {
-      max-width: 100%;
-      max-height: 150px;
-    }
-    .text {
-      font-size: 20px;
-      color: black;
-      max-width: calc(50% - 40px);
-      text-align: justify;
-      margin-right: 20px;
-      font-family: Georgia, 'Times New Roman', Times, serif;
-    }
-    .text.indented {
-      margin-left: 3cm;
-    }
-    .dropcap::first-letter {
-      float: left;
-      font-size: 3em;
-      line-height: 1;
-      padding-right: 0.1em;
-      padding-left: 0.2em;
-      color: black;
-    }
-    footer {
-      background-color: #83c5be;
-    }
-    .footerContainer {
-      width: 100%;
-      padding: 70px;
-    }
-    .footerNav {
-      margin: 30px 0;
-    }
-    .footerNav ul {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-    }
-    .footerNav ul li a {
-      color: black;
-      margin: 40px;
-      font-size: 0.5em;
-      opacity: 0.7;
-      transition: 0.5s;
-    }
-    .footerNav ul li a:hover {
-      opacity: 1;
-    }
-    .footerBottom {
-      background-color: #83c5be;
-      padding: 20px;
-      text-align: center;
-    }
-    hr.gradient {
-      border: none;
-      background: linear-gradient(to right, #000 0%, #fff 50%, #000 100%);
-      height: 2px;
-      margin: 20px 0;
-    }
-  </style>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee
+1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous"
+referrerpolicy="no-referrer" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TRACKER-GREENIMI</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+rel="stylesheet"
+integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6h
+W+ALEwIH" crossorigin="anonymous">
+<style type="text/css">
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+text-decoration: none;
+}
+body {
+margin: 0;
+padding: 0;
+}
+.navbar {
+background: #F7D9B1;
+font-family: PaleCornflowerBlue;
+padding: 10px 15px;
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+text-decoration: none;
+}
+.logo a {
+font-size: 35px;
+font-weight: 600;
+color: #285430 ;
+text-decoration: none;
+}
+.nav-links {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-grow: 1;
+text-decoration: none;
+}
+.nav-links a {
+color: #894949;
+font-size: 20px;
+font-weight: bold;
+margin-right: 60px;
+margin-left: 60px;
+text-decoration: none;
+}
+.button-wrapper {
+display: flex;
+align-items: center;
+}
+button {
+background-color: #e8d7c7;
+margin-left: 50px;
+border-radius: 10px;
+padding: 10px;
+width: 90px;
+}
+button a {
+color: #6d7a71;
+font-weight: bold;
+font-size: 15px;
+text-decoration: none;
+}
+body {
+margin: 0;
+padding: 0;
+background-color: #edf6f9; /* Set the background color for the body */
+}
+hr.dashed {
+border: none;
+border-top: 10px dashed brown;
+height: 0;
+margin: 20px 0;
+}
+.container {
+display: flex;
+align-items: center;
+justify-content: space-between; /* Adjusted to space between */
+margin-bottom: 20px; /* Add margin between containers */
+background-color: white; /* Set background color to white */
+padding: 20px; /* Added padding */
+}
+.image {
+margin-left: 20px; /* Adjusted to space between */
+float: right; /* Float image to the right */
+}
+.image img {
+max-width: 100%;
+max-height: 150px; /* Set maximum height for the image */
+}
+.text {
+font-size: 20px;
+color: black;
+max-width: calc(50% - 40px); /* Adjusted width */
+text-align: justify; /* Justify text */
+margin-right: 20px; /* Add margin between text and first image */
+font-family: Georgia, 'Times New Roman', Times, serif;
+}
+footer {
+background-color: #83c5be}
+.footerContainer{
+width: 100%;
+padding: 70px 70px 70px;
+}
+.footerNav{
+margin: 30px 0;
+}
+.footerNav ul{
+display: flex;
+justify-content: center;
+}
+.footerNav ul{
+list-style: none;
+}
+.footerNav ul li a{
+color: black;
+margin: 40px;
+text-decoration: none;
+font-size: 0.5ms;
+opacity: 0.7;
+transition: 0.5s;
+}
+.footerNav ul li a:hover{
+opacity: 1;
+}
+.footerBottom{
+background-color: #83c5be ;
+padding: 20px;
+text-align: center;
+}
+hr.gradient {
+border: none;
+background: linear-gradient(to right, #000 0%, #fff 50%, #000 100%);
+height: 2px;
+margin: 20px 0;
+}
+</style>
 </head>
 <body>
-  <nav class="navbar" style="background-color: #83c5be;">
-    <div class="logo">
-      <a href="#">
-        <img src="/static/logo.png" alt="LOGO" style="height: 50px; margin-right: 10px;" />
-        GREENIMI
-      </a>
-    </div>
-    <div class="nav-links">
-      <a href="#" style="color: whitesmoke;">HOME</a>
-      <a href="#" style="color: whitesmoke;">GAME</a>
-      <a href="#" style="color: whitesmoke;">TRACKER</a>
-      <a href="#" style="color: whitesmoke;">{{ points }}</a>
-    </div>
-  </nav>
-  <br>
-  <h1><center>MITRACKER</center></h1>
-  <div class="container">
-    <div class="text">
-      <p>In sustainability, activity trackers play a vital role by monitoring eco-friendly behaviors and encouraging sustainable practices. They track energy consumption, transportation choices, and waste reduction efforts, aiding in goal setting and behavior modification. With insights into environmental impact, they empower individuals to make conscious decisions and contribute to a greener planet.</p>
-    </div>
-    <img class="image" src="/static/tracker.gif" alt="Description of the gif">
-  </div>
-  <hr class="dashed">
-  <h1><center>HOW TO USE?</center></h1>
-  <br>
-  <div class="container">
-    <img class="image" src="/static/task.png" alt="Description of the gif">
-    <div class="text indented dropcap">
-      <p>Hello, adventurer! We are glad you stopped by and decided to take the action to save our planet. This tracker will be your quest map to reach your goals!</p>
-      <p><b>STEP 1:</b> Under the all quests tab, click on the + button to add it to your current quests. Keep in mind to add only those you can accomplish.</p>
-      <p><b>STEP 2:</b> Track your quests, check them off and earn earth stones. (These earth stones can be used to exchange for cute pets in our GreenMons Shop.)</p>
-      <p><b>STEP 3:</b> Collect cute and legendary pets along your quest to keep you company.</p>
-    </div>
-  </div>
+<nav class="navbar" style="background-color: #83c5be;">
+<div class="logo">
+<a href="#">
+<img src="\static\logo.png" alt="LOGO" style="height: 50px; margin-right: 10px" />
+GREENIMI
+</a>
+</div>
+<div class="nav-links" >
+<a href="/" style="color: whitesmoke;" >HOME</a>
+<a href="#" style="color: whitesmoke;">GAME</a>
+<a href="/tracker" style="color: whitesmoke;">TRACKER</a>
+<a href="/shop" style="color: whitesmoke;">MON SHOP</a>
+<a href="#" style="color: whitesmoke;">{{ points }}</a>
+</div>
+</nav><br>
+<h1><center>MITRACKER</center></h1>
+<div class="container">
+<div class="text">
+<p>In sustainability, activity trackers play a vital role by monitoring eco-friendly
+behaviors and encouraging sustainable practices. They track energy consumption,
+transportation choices, and waste reduction efforts, aiding in goal setting and behavior
+modification. With insights into environmental impact, they empower individuals to make
+conscious decisions and contribute to a greener planet.</p>
+</div>
+<img class="image" src="\static\tracker.gif" alt="Description of the gif">
+</div>
+<hr class="dashed"> <br>
+</div><h1><center>HOW TO USE?</center></h1><br>
+<div class="container">
+<img class="image" src="\static\task.png" alt="Description of the gif">
+<div class="text">
+Hello, adventurer! We are glad you stopped by and decided to take the action to
+save our planet
+<br> This tracker will be your quest map to reach your goals!<br>
+<br><b>STEP 1:</b> Under the all quests tab, click on the + button to add it to
+your current quests. Keep in mind to add only those you can accomplish.
+<br><br><b>STEP 2: </b> your quests, check them off and earn earth stones<br>
+(These earth stones can be used to exchange for cute pets in our GreenMons
+Shop.)
+<br> <br><b>STEP 3:</b> Collect cute and legendary pets along your quest to
+keep you company.
+</div>
+</div>
 </body>
 </html>
 

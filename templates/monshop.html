@@ -1,186 +1,177 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee
+1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous"
+referrerpolicy="no-referrer" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TRACKER-GREENIMI</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+rel="stylesheet"
+integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6h
+W+ALEwIH" crossorigin="anonymous">
 <style type="text/css">
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      text-decoration: none;
-    }
-    body {
-      margin: 0;
-      padding: 0;
-    }
-    .navbar {
-      background: #F7D9B1;
-      font-family: PaleCornflowerBlue;
-      padding: 10px 15px;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      text-decoration: none;
-      
-    }
-    .logo a {
-      font-size: 35px;
-      font-weight: 600;
-      color: #285430 ;
-      text-decoration: none;
-    }
-    .nav-links {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-grow: 1;
-      text-decoration: none;
-      
-    }
-    .nav-links a {
-      color: #894949;
-      font-size: 20px;
-      font-weight: bold;
-      margin-right: 60px;
-      margin-left: 60px;
-      text-decoration: none;
-    }
-    .button-wrapper {
-      display: flex;
-      align-items: center;
-    }
-    button {
-      background-color: #e8d7c7;
-      margin-left: 50px;
-      border-radius: 10px;
-      padding: 10px;
-      width: 90px;
-    }
-    button a {
-      color: #6d7a71;
-      font-weight: bold;
-      font-size: 15px;
-      text-decoration: none;
-    }
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #edf6f9; /* Set the background color for the body */
-    }
-    hr.dashed {
-    border: none;
-    border-top: 10px dashed brown;
-    height: 0;
-    margin: 20px 0;
-  }
-  
-    .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between; /* Adjusted to space between */
-      margin-bottom: 20px; /* Add margin between containers */
-      background-color: white; /* Set background color to white */
-      padding: 20px; /* Added padding */
-    }
-    .image {
-      margin-left: 20px; /* Adjusted to space between */
-      float: right; /* Float image to the right */
-    }
-    .image img {
-      max-width: 100%;
-      max-height: 500px; /* Set maximum height for the image */
-    }
-    .text {
-      font-size: 20px;
-      color: black; 
-      max-width: 50%; /* Adjusted width */
-      text-align: justify; /* Justify text */
-      margin-right: 20px; /* Add margin between text and first image */
-      font-family: Georgia, 'Times New Roman', Times, serif;
-    }
-    footer {
-  
-  background-color: #83c5be}
-  
-  .footerContainer{
-  
-  width: 100%;
-  
-  padding: 70px 70px 70px;
-  
-   }
-  
-
-  .footerNav{
-    margin: 30px 0;
-  
-  }
-  .footerNav ul{
-  
-    display: flex;
-    justify-content: center;
-  }
-  .footerNav ul{
-    list-style: none;
-  }
-  .footerNav ul li a{
-    
-  color: black;
-  margin: 40px;
-  text-decoration: none;
-  font-size: 0.5ms;
-  opacity: 0.7;
-  transition: 0.5s;
-  
-  
-  }
-  .footerNav ul li a:hover{
-  
-    opacity: 1;
-  }
-  .footerBottom{
-    background-color: #83c5be ;
-    padding: 20px;
-    text-align: center;
-  }
-  hr.gradient {
-    border: none;
-    background: linear-gradient(to right, #000 0%, #fff 50%, #000 100%);
-    height: 2px;
-    margin: 20px 0;
-  }
-  
-  </style>
-  </head>
-  <body>
-      <nav class="navbar" style="background-color: #83c5be;">
-          <div class="logo">
-            <a href="#">
-              <img src="\static\logo.png" alt="LOGO" style="height: 50px; margin-right: 10px" />
-              GREENIMI
-            </a>
-          </div>
-          <div class="nav-links" >
-            <a href="/" style="color: whitesmoke;" >HOME</a>
-            <a href="#" style="color: whitesmoke;">GAME</a>
-            <a href="/tracker" style="color: whitesmoke;">TRACKER</a>
-            <a href="/shop" style="color: whitesmoke;">MON SHOP</a>
-            <a href="#" style="color: whitesmoke;">{{ points }}</a>
-          </div>
-        </nav><br>
-        <h1><center>TIME FOR SHOPPING</center></h1>
-        <div class="container">
-           
-          <div class="text">
-              <p>Welcome to GreeniMi's Pet Shop! Here, you can exchange your earth points to get yourselves some cute GreeniMons from our collection. As the saying goes, "Gotta catch 'em all!".<br><br>GreeniMons are classified on the basis of their rarity into 5 categories : <br>1. Common<br> 2. Rare<br> 3. Epic<br> 4. Legendary<br> 5. Extinct <br> So what are you waiting for? Exchange your earth points and take home some of the cutest pets!<br><br><i>If you find yourself going broke, don't worry, there are tons of sustainability quests to get yourselves some earth points</i></p>
-          </div>
-          <img class="image" src="\static\cutecat.gif" alt="Description of the gif">
-
-      </div>
-        </body>
-</html>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+text-decoration: none;
+}
+body {
+margin: 0;
+padding: 0;
+}
+.navbar {
+background: #F7D9B1;
+font-family: PaleCornflowerBlue;
+padding: 10px 15px;
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+text-decoration: none;
+}
+.logo a {
+font-size: 35px;
+font-weight: 600;
+color: #285430 ;
+text-decoration: none;
+}
+.nav-links {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-grow: 1;
+text-decoration: none;
+}
+.nav-links a {
+color: #894949;
+font-size: 20px;
+font-weight: bold;
+margin-right: 60px;
+margin-left: 60px;
+text-decoration: none;
+}
+.button-wrapper {
+display: flex;
+align-items: center;
+}
+button {
+background-color: #e8d7c7;
+margin-left: 50px;
+border-radius: 10px;
+padding: 10px;
+width: 90px;
+}
+button a {
+color: #6d7a71;
+font-weight: bold;
+font-size: 15px;
+text-decoration: none;
+}
+body {
+margin: 0;
+padding: 0;
+background-color: #edf6f9; /* Set the background color for the body */
+}
+hr.dashed {
+border: none;
+border-top: 10px dashed brown;
+height: 0;
+margin: 20px 0;
+}
+.container {
+display: flex;
+align-items: center;
+justify-content: space-between; /* Adjusted to space between */
+margin-bottom: 20px; /* Add margin between containers */
+background-color: white; /* Set background color to white */
+padding: 20px; /* Added padding */
+}.image {
+margin-left: 20px; /* Adjusted to space between */
+float: right; /* Float image to the right */
+}
+.image img {
+max-width: 100%;
+max-height: 500px; /* Set maximum height for the image */
+}
+.text {
+font-size: 20px;
+color: black;
+max-width: 50%; /* Adjusted width */
+text-align: justify; /* Justify text */
+margin-right: 20px; /* Add margin between text and first image */
+font-family: Georgia, 'Times New Roman', Times, serif;
+}
+footer {
+background-color: #83c5be}
+.footerContainer{
+width: 100%;
+padding: 70px 70px 70px;
+}
+.footerNav{
+margin: 30px 0;
+}
+.footerNav ul{
+display: flex;
+justify-content: center;
+}
+.footerNav ul{
+list-style: none;
+}
+.footerNav ul li a{
+color: black;
+margin: 40px;
+text-decoration: none;
+font-size: 0.5ms;
+opacity: 0.7;transition: 0.5s;
+}
+.footerNav ul li a:hover{
+opacity: 1;
+}
+.footerBottom{
+background-color: #83c5be ;
+padding: 20px;
+text-align: center;
+}
+hr.gradient {
+border: none;
+background: linear-gradient(to right, #000 0%, #fff 50%, #000 100%);
+height: 2px;
+margin: 20px 0;
+}
+</style>
+</head>
+<body>
+<nav class="navbar" style="background-color: #83c5be;">
+<div class="logo">
+<a href="#">
+<img src="\static\logo.png" alt="LOGO" style="height: 50px; margin-right: 10px" />
+GREENIMI
+</a>
+</div>
+<div class="nav-links" >
+<a href="/" style="color: whitesmoke;" >HOME</a>
+<a href="#" style="color: whitesmoke;">GAME</a>
+<a href="/tracker" style="color: whitesmoke;">TRACKER</a>
+<a href="/shop" style="color: whitesmoke;">MON SHOP</a>
+<a href="#" style="color: whitesmoke;">{{ points }}</a>
+</div>
+</nav><br>
+<h1><center>TIME FOR SHOPPING</center></h1>
+<div class="container">
+<div class="text">
+<p>Welcome to GreeniMi's Pet Shop! Here, you can exchange your earth points to
+get yourselves some cute GreeniMons from our collection. As the saying goes, "Gotta catch
+'em all!".<br><br>GreeniMons are classified on the basis of their rarity into 5 categories :
+<br>1. Common<br> 2. Rare<br> 3. Epic<br> 4. Legendary<br> 5. Extinct <br> So what are
+you waiting for? Exchange your earth points and take home some of the cutest pets!<br><br><i>If you find yourself going broke, don't worry, there are tons of sustainability
+  quests to get yourselves some earth points</i></p>
+  </div>
+  <img class="image" src="\static\cutecat.gif" alt="Description of the gif">
+  </div>
+  </body>
+  </html>
