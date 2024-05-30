@@ -1,6 +1,6 @@
 from flask import Flask, session, render_template, request, url_for, redirect
 from flask_sqlalchemy import SQLAlchemy
-from flask_login import UserMixin, LoginManager, login_user
+from flask_login import UserMixin, LoginManager, login_user, login_required, current_user
 from flask_session import Session
 
 
@@ -13,7 +13,7 @@ Session(app)
 db = SQLAlchemy()
 login_manager = LoginManager()
 login_manager.init_app(app)
-
+login_manager.login_view = "login"
 
 class Users(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -30,7 +30,7 @@ with app.app_context():
 
 @login_manager.user_loader
 def user_load(user_id):
-    return Users.query.get(user_id)
+    return Users.query.get(int(user_id))
 
 
 @app.route("/")
@@ -46,23 +46,25 @@ def login():
         user = Users.query.filter_by(email=request.form.get("email")).first()
         if user.password == request.form.get("password"):
             login_user(user)
-            session["user"] = user
+            session["user_id"] = user.id
             session["user"]= user.points
             logins= True
             return render_template("home_loggedin.html", login=logins, points= user.points)
     return render_template("login.html")
 
 @app.route("/shop")
+@login_required
 def shop():
-    user = session.get("user")
-    points = user.points if user else 0
+    points = current_user.points
     return render_template("monshop.html", points=points)
 
+
 @app.route("/tracker")
+@login_required
 def tracker():
-    user = session.get("user")
-    points = user.points if user else 0
+    points = current_user.points
     return render_template("tracker.html", points=points)
+
 
 
 @app.route('/logout')
