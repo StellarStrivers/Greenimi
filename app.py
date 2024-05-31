@@ -2,8 +2,7 @@ from flask import Flask, session, render_template, request, url_for, redirect, f
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, LoginManager, login_user, login_required, current_user
 from flask_session import Session
-from flask import jsonify
-import json
+
 
 
 app = Flask(__name__)
