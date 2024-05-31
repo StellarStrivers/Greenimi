@@ -1,21 +1,20 @@
-Fri May 31 16:54:59 2024
+Fri May 31 18:35:03 2024
 Windows-10-10.0.22631
 Ren'Py 8.1.3.23091805
  
 
 Bootstrap to the start of init.init. took 0.06s
-Early init. took 0.01s
+Early init. took 0.00s
 Loader init. took 0.07s
 Loading error handling. took 0.05s
-Loading script. took 0.37s
-Loading save slot metadata. took 0.07s
+Loading script. took 0.45s
+Loading save slot metadata. took 0.08s
 Loading persistent. took 0.00s
-Running init code. took 0.09s
+Running init code. took 0.12s
 Loading analysis data. took 0.02s
 Analyze and compile ATL. took 0.00s
 Reloading save slot metadata. took 0.05s
 Index archives took 0.00s
-Backing up script files to 'C:\\Users\\ibrah\\AppData\\Roaming/RenPy/backups\\GreeniMe':
 Dump and make backups. took 0.10s
 Cleaning cache. took 0.00s
 Making clean stores. took 0.00s
@@ -23,19 +22,19 @@ Initial gc. took 0.04s
 DPI scale factor: 1.500000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
+Creating interface object. took 0.02s
 Cleaning stores took 0.00s
 Init translation took 0.05s
 Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.07s
+Load screen analysis took 0.04s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
 Prepare screens took 0.10s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.04s
 Running _start took 0.00s
 Performance test:
-Interface start. took 0.12s
+Interface start. took 0.11s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -45,5 +44,5 @@ Vendor: "b'ATI Technologies Inc.'"
 Renderer: b'AMD Radeon(TM) Graphics'
 Version: b'4.6.0 Compatibility Profile Context 23.11.1.231017'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1731, 974) drawable=(1731, 974)
+Screen sizes: virtual=(1920, 1080) physical=(1920, 974) drawable=(1920, 974)
 Maximum texture size: 4096x4096

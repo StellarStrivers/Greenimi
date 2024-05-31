@@ -5,26 +5,40 @@
 define r = Character(name="Reyna", image="reyna")
 
 label start:
-    play music "audio/ecoplay-bgs.mp3"
+    stop music
     scene bg city
     show reyna sad at left
+    play sound "audio/part1.2.mp3"
     "As the sun painted the city in warm shades, a small child was running along the house, helping her parents to pack"
     pause 0.6
     scene bg apartment
+    play sound "audio/part1.1.mp3"
     "Meet Reyna, a 10 year old child preparing to move to her Aunt's house, in a small town near the edges of Elmwood trail"
     pause 0.6
+    play sound "audio/part1.3.mp3"
     "But her Aunt isn't what meets the eye. Aunt Camilla is a soul loved by fairies"
     pause 0.6
+    
+    play sound "audio/part1.3.1.mp3"
     "She goes on adventures to meet her fairy friends during the winter solstice"
     pause 0.6
+    play sound "audio/part1.4.mp3"
     "Reyna wishes to accompany her aunt to meet the fairies this winter solstice"
     pause 0.6
+    
+    play sound "audio/part1.5.mp3"
     "But, to do that Reyna first needs to increase her nature affinity"
     pause 0.6
+    
+    play sound "audio/part1.6.mp3"
     "This can be done by being sustainable. But Reyna isn't sure what it means to be sustainable"
     pause 0.6
+    
+    play sound "audio/part1.7.mp3"
     "Are you willing to help Reyna understand sustainability and meet the fairies?"
+    play music "audio/ecoplay-bgs.mp3"
     menu:
+        
         "yes!":
             jump scene1
         "no":

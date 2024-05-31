@@ -1,40 +1,142 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 8, in script
-    play music ecoplay-bgs
-  File "renpy/common/000statements.rpy", line 123, in execute_play_music
-    renpy.music.play(_audio_eval(p["file"]),
-  File "renpy/common/000statements.rpy", line 32, in _audio_eval
-    return eval(expr, locals=store.audio.__dict__)
-  File "game/script.rpy", line 8, in <module>
-    play music ecoplay-bgs
-NameError: name 'ecoplay' is not defined
+  File "renpy/common/00start.rpy", line 275, in script
+    python:
+  File "renpy/common/00start.rpy", line 275, in script
+    python:
+  File "renpy/common/00start.rpy", line 279, in <module>
+    renpy.call_in_new_context("_main_menu")
+Exception: Could not find font 'gui/font/SouciSansNF.ttf'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 8, in script
-    play music ecoplay-bgs
-  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\ast.py", line 2259, in execute
-    self.call("execute")
-  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\ast.py", line 2241, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\statements.py", line 342, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 123, in execute_play_music
-    renpy.music.play(_audio_eval(p["file"]),
-  File "renpy/common/000statements.rpy", line 32, in _audio_eval
-    return eval(expr, locals=store.audio.__dict__)
-  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\python.py", line 1153, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 8, in <module>
-    play music ecoplay-bgs
-NameError: name 'ecoplay' is not defined
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\bootstrap.py", line 275, in bootstrap
+    renpy.main.main()
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\main.py", line 670, in main
+    run(restart)
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\main.py", line 144, in run
+    renpy.execution.run_context(True)
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\execution.py", line 955, in run_context
+    context.run()
+  File "renpy/common/00start.rpy", line 275, in script
+    python:
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 444, in raise_
+  File "renpy/common/00start.rpy", line 275, in script
+    python:
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\ast.py", line 1138, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\python.py", line 1122, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00start.rpy", line 279, in <module>
+    renpy.call_in_new_context("_main_menu")
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\game.py", line 349, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\execution.py", line 955, in run_context
+    context.run()
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 444, in raise_
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\ast.py", line 1138, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\python.py", line 1122, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
+    python hide:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
+    ui.interact()
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\display\core.py", line 3582, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\display\core.py", line 4175, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\display\core.py", line 2782, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 492, in renpy.display.render.render_screen
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\display\layout.py", line 888, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\display\transition.py", line 378, in render
+    top = render(self.new_widget, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\display\layout.py", line 888, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\display\layout.py", line 888, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\display\screen.py", line 731, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\display\layout.py", line 888, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\display\layout.py", line 1338, in render
+    surf = render(child,
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\display\layout.py", line 1064, in render
+    surf = render(d, rw, height - y, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\display\layout.py", line 1338, in render
+    surf = render(child,
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\display\layout.py", line 1851, in render
+    cwidth, cheight = sizeit('c', width, height, 0, 0)
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\display\layout.py", line 1848, in sizeit
+    rend = renpy.display.render.render_for_size(pos_d[pos], width, height, st, at)
+  File "render.pyx", line 318, in renpy.display.render.render_for_size
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\display\viewport.py", line 285, in render
+    surf = renpy.display.render.render(self.child, child_width, child_height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\display\layout.py", line 1109, in render
+    surf = render(d, width - x, rh, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\display\layout.py", line 1109, in render
+    surf = render(d, width - x, rh, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\display\layout.py", line 1064, in render
+    surf = render(d, rw, height - y, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\display\layout.py", line 1109, in render
+    surf = render(d, width - x, rh, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\display\layout.py", line 1338, in render
+    surf = render(child,
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\text\text.py", line 2171, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\text\text.py", line 665, in __init__
+    glyphs = ts.glyphs(s, self)
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\text\text.py", line 257, in glyphs
+    fo = font.get_font(self.font, self.size, self.bold, self.italic, 0, self.antialias, self.vertical, self.hinting, layout.oversample)
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\text\font.py", line 721, in get_font
+    face = load_face(fn)
+  File "C:\Users\ibrah\OneDrive\Documents\A game renpy\renpy-8.1.3-sdk\renpy\text\font.py", line 662, in load_face
+    raise Exception("Could not find font {0!r}.".format(orig_fn))
+Exception: Could not find font 'gui/font/SouciSansNF.ttf'.
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.1.3.23091805
-GreeniMe 1.0
-Fri May 31 16:54:14 2024
+EcoPlay 1.0
+Fri May 31 18:24:35 2024
