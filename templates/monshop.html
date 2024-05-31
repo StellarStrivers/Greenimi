@@ -23,6 +23,7 @@ text-decoration: none;
 body {
 margin: 0;
 padding: 0;
+background-color: #edf6f9; /* Set the background color for the body */
 }
 .navbar {
 background: #F7D9B1;
@@ -72,11 +73,7 @@ font-weight: bold;
 font-size: 15px;
 text-decoration: none;
 }
-body {
-margin: 0;
-padding: 0;
-background-color: #edf6f9; /* Set the background color for the body */
-}
+
 hr.dashed {
 border: none;
 border-top: 10px dashed brown;
@@ -90,7 +87,8 @@ justify-content: space-between; /* Adjusted to space between */
 margin-bottom: 20px; /* Add margin between containers */
 background-color: white; /* Set background color to white */
 padding: 20px; /* Added padding */
-}.image {
+}
+.image {
 margin-left: 20px; /* Adjusted to space between */
 float: right; /* Float image to the right */
 }
@@ -143,6 +141,73 @@ background: linear-gradient(to right, #000 0%, #fff 50%, #000 100%);
 height: 2px;
 margin: 20px 0;
 }
+
+.card-container {
+display: flex;
+flex-wrap: wrap;
+align-items: center; /* Align items within the flexbox vertically */
+  justify-content: center;
+margin-top: 20px;
+}
+.card {
+width: 18rem;
+margin: 10px;
+background-color: #f0f0f0;
+border-radius: 10px;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card img {
+height: 200px;
+margin-top: 20px;
+margin-left: 20px;
+width: 250px;
+object-fit: cover;
+border-radius: 10px 10px 0 0;
+}
+.card-body {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 15px;
+}
+.card-body h5, .card-body p {
+margin: 5px 0;
+}
+.card-body button {
+margin-top: 10px;
+background-color: #83c5be;
+color: white;
+border: none;
+border-radius: 5px;
+padding: 5px 10px;
+align-items: center;
+cursor: pointer;
+}
+
+.popup {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100vh;
+background-color: rgba(0, 0, 0, 0.5);
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 999;
+}
+.popup-content {
+background-color: white;
+padding: 20px;
+border-radius: 5px;
+text-align: center;
+}
+.popup-close {
+position: absolute;
+top: 10px;
+right: 10px;
+cursor: pointer;
+}
 </style>
 </head>
 <body>
@@ -169,9 +234,55 @@ get yourselves some cute GreeniMons from our collection. As the saying goes, "Go
 'em all!".<br><br>GreeniMons are classified on the basis of their rarity into 5 categories :
 <br>1. Common<br> 2. Rare<br> 3. Epic<br> 4. Legendary<br> 5. Extinct <br> So what are
 you waiting for? Exchange your earth points and take home some of the cutest pets!<br><br><i>If you find yourself going broke, don't worry, there are tons of sustainability
-  quests to get yourselves some earth points</i></p>
+quests to get yourselves some earth points</i></p>
+</div>
+<img class="image" src="\static\cutecat.gif" alt="Description of the gif">
+</div>
+<div class="card-container">
+{% for mon in mons %}
+<div class="card">
+<img src="{{ url_for('static', filename=mon.image) }}" class="card-img-top" alt="{{ mon.name }}">
+<div class="card-body">
+<h5 class="card-title">{{ mon.name }}</h5>
+<p class="card-text">Rank: {{ mon.rank }}</p>
+<p class="card-text">Cost: {{ mon.points }} points</p>
+<form action="\buy_mon" method="post">
+<button data-mon-id="{{ mon.id }}" class="btn btn-primary">Buy</button></form>
+</div>
+</div>
+{% endfor %}
+</div>
+
+<div class="popup" id="notEnoughPointsPopup">
+  <div class="popup-content">
+    <h2>Oops! Not enough Earth Points!</h2>
+    <p>You don't have enough Earth Points to buy this GreeniMon. Keep collecting points by completing sustainability quests and come back later!</p>
+    <button onclick="closePopup()">Close</button>
   </div>
-  <img class="image" src="\static\cutecat.gif" alt="Description of the gif">
-  </div>
-  </body>
-  </html>
+</div>
+
+<script>
+  function closePopup() {
+    document.getElementById("notEnoughPointsPopup").style.display = "none";
+  }
+  
+  // Add event listener to the buy button
+  document.querySelectorAll(".card-body button").forEach(button => {
+    button.addEventListener("click", function(event) {
+      // Check if user has enough points
+      const monId = parseInt(this.dataset.monId);
+      const pointsNeeded = parseInt(document.querySelector(`.card[data-mon-id="${monId}"] .card-text:last-child`).textContent.split(" ")[1]);
+      const userPoints = parseInt(document.querySelector(".nav-links a:last-child").textContent);
+      if (userPoints < pointsNeeded) {
+        event.preventDefault(); // Prevent form submission
+        document.getElementById("notEnoughPointsPopup").style.display = "block";
+      }
+    });
+  });
+  
+  </script>
+</body>
+</html>
+
+
+    
