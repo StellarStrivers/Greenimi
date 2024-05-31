@@ -1,4 +1,4 @@
-from flask import Flask, session, render_template, request, url_for, redirect, flash
+from flask import Flask, session, render_template, request, url_for, redirect
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, LoginManager, login_user, login_required, current_user
 from flask_session import Session
@@ -141,11 +141,9 @@ def buy_mon():
     if mon and current_user.points >= mon.points:
         current_user.points -= mon.points
         db.session.commit()
-        return redirect(url_for('shop'))
-    else:
         # You can add logic to save the purchase if needed
-        flash("Not enough points, collect more points by completing quests")
-    return redirect(url_for('shop'))
+        return redirect(url_for('shop'))
+    return redirect(url_for('shop', error="Not enough points or invalid monster"))
 
 
 @app.route("/tracker")
@@ -167,23 +165,17 @@ def take_quest():
         return redirect(url_for('tracker'))
     return redirect(url_for('tracker', error="Quest already assigned"))
 
-@app.route("/your_quests")
-@login_required
-def your_quests():
-    points = current_user.points
-    user_quests = Quest.query.filter_by(user_id=current_user.id).all()
-    return render_template("user_quests.html", points=points, user_quests=user_quests)
 
 @app.route("/complete_quest", methods=["POST"])
 @login_required
 def complete_quest():
-    '''quest_id = request.form.get("quest_id")
+    quest_id = request.form.get("quest_id")
     quest = Quest.query.get(quest_id)
     if quest and quest.user_id == current_user.id:
-        quest.user_id = None'''
-    current_user.points += 50
-    db.session.commit()
-    return redirect(url_for('your_quests'))
+        quest.user_id = None
+        current_user.points += quest.points
+        db.session.commit()
+        return redirect(url_for('tracker'))
 
 @app.route('/logout')
 def logout():
@@ -203,10 +195,8 @@ def signup():
 points=points)
         db.session.add(user)
         db.session.commit()
-        points = user.points
-        return render_template("home_loggedin.html", points=points)
+        return render_template("home_loggedin.html")
     return render_template("signup.html")
 
 if __name__ == "__main__":
     app.run(debug="True")
-

@@ -185,38 +185,38 @@
   background-color: #f2f2f2;
   text-decoration: line-through;
 }
-.tab-content ul li {
-  display: block;
-  list-style: none;
-  margin: 5px;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f5f5f5;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 100%; /* Full width */
-}
+.quest-items {
+    display: block;
+    list-style: none;
+    margin: 5px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Full width */
+    }
 
-.tab-content ul li button {
-  float: right;
-  padding: 5px 10px;
-  border: none;
-  margin-top: -30px;
-  border-radius: 3px;
-  background-color: #7a9952; /* Green color */
-  color: white;
-  cursor: pointer;
-  margin-left: auto;
-  justify-content: flex-end;
-}
+.quest-buttons {
+    float: right;
+    padding: 5px 10px;
+    border: none;
+    margin-top: -30px;
+    border-radius: 3px;
+    background-color: #7a9952; /* Green color */
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+    justify-content: flex-end;
+    }
 
-.tab-content ul li button:hover {
-  background-color: #d3e99c; /* Darker green on hover */
-}
+.quest-buttons:hover {
+    background-color: #d3e99c; /* Darker green on hover */
+    }
 
-.tab-content ul li:nth-child(odd) {
-  background-color: #f0f0f0; /* Alternate background color */
-}
+h2 ul li:nth-child(odd) {
+    background-color: #f0f0f0; /* Alternate background color */
+    }
 
     </style>
 </head>
@@ -266,121 +266,26 @@ keep you company.
         
 <ul class="nav nav-tabs">
     <li class="nav-item">
-        <a class="nav-link active" href="/tracker" data-toggle="tab">All Quests</a>
+        <a class="nav-link" href="/tracker" data-toggle="tab" style="color: #3a7450;"><b>All Quests</b></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="/your_quests" data-toggle="tab" style="color: #3a7450;"><b>Your Quests</b></a>
+        <a class="nav-link active" href="/your_quests" data-toggle="tab">Your Quests</a>
     </li>
 </ul>
 
-<div class="tab-content">
-    <div class="tab-pane active" id="all-quests">
-        <h2>All Quests</h2>
-        <ul>
-                <li>
-                    Recycle 5 plastic bottles
-                    <form method="POST" action="/take_quest">
-                        <input type="hidden" name="quest_id" value= 1>
-                        <button type="submit">+</button>
-                    </form>
-                </li>
-                <li>
-                    Walk instead of drive for a day
-                    <form method="POST" action="/take_quest">
-                        <input type="hidden" name="quest_id" value= 2>
-                        <button type="submit">+</button>
-                    </form>
-                </li>
-                <li>
-                    Shorten showers
-                    <form method="POST" action="/take_quest">
-                        <input type="hidden" name="quest_id" value= 3>
-                        <button type="submit">+</button>
-                    </form>
-                </li>
-                <li>
-                    Donate old clothes
-                    <form method="POST" action="/take_quest">
-                        <input type="hidden" name="quest_id" value= 4>
-                        <button type="submit">+</button>
-                    </form>
-                </li>
-                <li>
-                    Create different bins for different waste
-                    <form method="POST" action="/take_quest">
-                        <input type="hidden" name="quest_id" value= 5>
-                        <button type="submit">+</button>
-                    </form>
-                </li>
-                <li>
-                    Plant a tree
-                    <form method="POST" action="/take_quest">
-                        <input type="hidden" name="quest_id" value= 6>
-                        <button type="submit">+</button>
-                    </form>
-                </li>
-                <li>
-                    Donate old books
-                    <form method="POST" action="/take_quest">
-                        <input type="hidden" name="quest_id" value= 7>
-                        <button type="submit">+</button>
-                    </form>
-                </li>
-                <li>
-                    Hang a tote bag near doorway
-                    <form method="POST" action="/take_quest">
-                        <input type="hidden" name="quest_id" value= 8>
-                        <button type="submit">+</button>
-                    </form>
-                </li>
-                <li>
-                    Use Tote Bag 5 times
-                    <form method="POST" action="/take_quest">
-                        <input type="hidden" name="quest_id" value= 9>
-                        <button type="submit">+</button>
-                    </form>
-                </li>
-                <li>
-                    Buy a Bamboo Brush
-                    <form method="POST" action="/take_quest">
-                        <input type="hidden" name="quest_id" value= 10>
-                        <button type="submit">+</button>
-                    </form>
-                </li>
-
-        </ul>
-    </div>
-    <div class="tab-pane" id="your-quests">
-        <h2>Your Quests</h2>
-        <ul>
-            {% for quest in user_quests %}
-                <li>
-                    {{ quest.description }}
+<h2>Your Quests</h2>
+    <ul>
+        {% for quest in user_quests %}
+            <li class="quest-items">
+                {{ quest.description }}
                     <form method="POST" action="/complete_quest">
-                        <input type="hidden" name="quest_id" value=`${quest.id}`>
-                        <button type="submit">X</button>
+                        <input type="hidden" name="quest_id" value="{{ quest.id }}">
+                        <button class="quest-buttons" type="submit">Complete</button>
                     </form>
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ken7skxPAqjjJbMSqExv7m4WBFbON+yZj3R0jzgqVA1K6u7t0Jbr40+z2Buzvh9" crossorigin="anonymous"></script>
-<script>
+            </li>
+        {% endfor %}
+    </ul>
     
-document.addEventListener("DOMContentLoaded", function() {
-    const yourQuestsTab = document.getElementById("your-quests");
-    if (yourQuestsTab) {
-      yourQuestsTab.addEventListener("click", function(event) {
-        if (event.target.tagName.toLowerCase() === "button") {
-          // Submit the form associated with the clicked button
-          event.target.parentNode.submit();
-        }
-      });
-    }
-  });
-</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ken7skxPAqjjJbMSqExv7m4WBFbON+yZj3R0jzgqVA1K6u7t0Jbr40+z2Buzvh9" crossorigin="anonymous"></script>
 </body>
 </html>
-       

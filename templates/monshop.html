@@ -242,48 +242,232 @@ quests to get yourselves some earth points</i></p>
 
 <h1><center>GREENIMONS</center></h1>
 <div class="card-container">
-{% for mon in mons %}
 <div class="card">
-<img src="{{ url_for('static', filename=mon.image) }}" class="card-img-top" alt="{{ mon.name }}">
+<img src="static/seal-grey.jpg" class="card-img-top" alt="Lady Flipperton">
 <div class="card-body">
-<h5 class="card-title">{{ mon.name }}</h5>
-<p class="card-text">Rank: {{ mon.rank }}</p>
-<p class="card-text">Cost: {{ mon.points }} points</p>
+<h5 class="card-title">Lady Flipperton</h5>
+<p class="card-text">Rank: Common</p>
+<p class="card-text">Cost: 160 points</p>
 <form action="\buy_mon" method="post">
-<button data-mon-id="{{ mon.id }}" class="btn btn-primary">Buy</button></form>
+  
+  <input type="hidden" name="mon_id" value= 1>
+<button data-mon-id=1 class="btn btn-primary">Buy</button></form>
 </div>
-</div>
-{% endfor %}
 </div>
 
-<div class="popup" id="notEnoughPointsPopup">
-  <div class="popup-content">
-    <h2>Oops! Not enough Earth Points!</h2>
-    <p style="margin-top: 15px;">You don't have enough Earth Points to buy this GreeniMon. Keep collecting points by completing sustainability quests and come back later!</p>
-    <button onclick="closePopup()" style="margin-top: 15px;">Close</button>
+<div class="card">
+<img src="static/cutepenguin.jpg" class="card-img-top" alt="Young Master Hugguin">
+<div class="card-body">
+<h5 class="card-title">Young Master Hugguin</h5>
+<p class="card-text">Rank: Common</p>
+<p class="card-text">Cost: 180 points</p>
+<form action="\buy_mon" method="post">
+  
+  <input type="hidden" name="mon_id" value= 2>
+<button data-mon-id=2 class="btn btn-primary" name="mon-id" value=2>Buy</button></form>
+</div>
+</div>
+
+<div class="card">
+  <img src="static/penguin-heart.jpg" class="card-img-top" alt="Lady Penguinella">
+  <div class="card-body">
+  <h5 class="card-title">Lady Penguinella</h5>
+  <p class="card-text">Rank: Common</p>
+  <p class="card-text">Cost: 150 points</p>
+  <form action="\buy_mon" method="post">
+    <input type="hidden" name="mon_id" value= 3>
+  <button data-mon-id=3 class="btn btn-primary">Buy</button></form>
+  </div>
+  </div>
+
+
+<div class="card">
+  <img src="static/tiger_baby.jpg" class="card-img-top" alt="Captain Stripes">
+  <div class="card-body">
+  <h5 class="card-title">Captain Stripes</h5>
+  <p class="card-text">Rank: Rare</p>
+  <p class="card-text">Cost: 300 points</p>
+  <form action="\buy_mon" method="post">
+    
+    <input type="hidden" name="mon_id" value= 4>
+  <button data-mon-id=4 class="btn btn-primary">Buy</button></form>
   </div>
 </div>
 
+<div class="card">
+  <img src="static/magic_cat.jpg" class="card-img-top" alt="Lord Whiskers">
+  <div class="card-body">
+  <h5 class="card-title">Lord Whiskers</h5>
+  <p class="card-text">Rank: Rare</p>
+  <p class="card-text">Cost: 450 points</p>
+  <form action="\buy_mon" method="post">
+    
+    <input type="hidden" name="mon_id" value= 5>
+  <button data-mon-id=5 class="btn btn-primary">Buy</button></form>
+  </div>
+</div>
+
+<div class="card">
+  <img src="static/pinkaxolot.jpg" class="card-img-top" alt="Knight Axolart">
+  <div class="card-body">
+  <h5 class="card-title">Knight Axolart</h5>
+  <p class="card-text">Rank: Rare</p>
+  <p class="card-text">Cost: 250 points</p>
+  <form action="\buy_mon" method="post">
+    
+    <input type="hidden" name="mon_id" value= 6>
+  <button data-mon-id=6 class="btn btn-primary">Buy</button></form>
+  </div>
+</div>
+
+<div class="card">
+  <img src="static/floralfox.jpg" class="card-img-top" alt="Princess Vinefox">
+  <div class="card-body">
+  <h5 class="card-title">Princess Vinefox</h5>
+  <p class="card-text">Rank: Epic</p>
+  <p class="card-text">Cost: 600 points</p>
+  <form action="\buy_mon" method="post">
+    
+    <input type="hidden" name="mon_id" value= 7>
+  <button data-mon-id=7 class="btn btn-primary">Buy</button></form>
+  </div>
+</div>
+
+<div class="card">
+  <img src="static/cauliflower.jpg" class="card-img-top" alt="Dame Caulilou">
+  <div class="card-body">
+  <h5 class="card-title">Dame Caulilou</h5>
+  <p class="card-text">Rank: Epic</p>
+  <p class="card-text">Cost: 500 points</p>
+  <form action="\buy_mon" method="post">
+    
+    <input type="hidden" name="mon_id" value= 8>
+  <button data-mon-id=8 class="btn btn-primary">Buy</button></form>
+  </div>
+</div>
+
+<div class="card">
+  <img src="static/bluefox.jpg" class="card-img-top" alt="Lady Springbell">
+  <div class="card-body">
+  <h5 class="card-title">Lady Springbell</h5>
+  <p class="card-text">Rank: Legendary</p>
+  <p class="card-text">Cost: 800 points</p>
+  <form action="\buy_mon" method="post">
+    
+    <input type="hidden" name="mon_id" value= 9>
+  <button data-mon-id=9 class="btn btn-primary">Buy</button></form>
+  </div>
+</div>
+
+<div class="card">
+  <img src="static/carrot_rabbit.jpg" class="card-img-top" alt="Mr. Raborrot">
+  <div class="card-body">
+  <h5 class="card-title">Mr. Raborrot</h5>
+  <p class="card-text">Rank: Legendary</p>
+  <p class="card-text">Cost: 770 points</p>
+  <form action="\buy_mon" method="post">
+    
+    <input type="hidden" name="mon_id" value= 10>
+  <button data-mon-id=10 class="btn btn-primary">Buy</button></form>
+  </div>
+</div>
+
+<div class="card">
+  <img src="static/wingfox.jpg" class="card-img-top" alt="Duke Foxclo">
+  <div class="card-body">
+  <h5 class="card-title">Duke Foxclo</h5>
+  <p class="card-text">Rank: Legendary</p>
+  <p class="card-text">Cost: 890 points</p>
+  <form action="\buy_mon" method="post">
+    
+    <input type="hidden" name="mon_id" value= 11>
+  <button data-mon-id=11 class="btn btn-primary">Buy</button></form>
+  </div>
+</div>
+
+<div class="card">
+  <img src="static/zoobat.jpg" class="card-img-top" alt="Baron Bathart">
+  <div class="card-body">
+  <h5 class="card-title">Baron Bathart</h5>
+  <p class="card-text">Rank: Extinct</p>
+  <p class="card-text">Cost: 1200 points</p>
+  <form action="\buy_mon" method="post">
+    
+    <input type="hidden" name="mon_id" value= 12>
+  <button data-mon-id=12 class="btn btn-primary">Buy</button></form>
+  </div>
+</div>
+
+<div class="card">
+  <img src="static/waterpony.jpg" class="card-img-top" alt="Queen Horsesea">
+  <div class="card-body">
+  <h5 class="card-title">Queen Horsesea</h5>
+  <p class="card-text">Rank: Extinct</p>
+  <p class="card-text">Cost: 2000 points</p>
+  <form action="\buy_mon" method="post">
+    
+    <input type="hidden" name="mon_id" value= 13>
+  <button data-mon-id=13 class="btn btn-primary">Buy</button></form>
+  </div>
+</div>
+
+<div class="card">
+  <img src="static/dandelionlion.jpg" class="card-img-top" alt="Duke Dandeleon">
+  <div class="card-body">
+  <h5 class="card-title">Duke Dandeleon</h5>
+  <p class="card-text">Rank: Extinct</p>
+  <p class="card-text">Cost: 1600 points</p>
+  <form action="\buy_mon" method="post">
+    
+    <input type="hidden" name="mon_id" value= 14>
+  <button data-mon-id=14 class="btn btn-primary">Buy</button></form>
+  </div>
+</div>
+</div>
+{% with messages = get_flashed_messages()%}
+    {% if messages%}
+<div class="popup" id="notEnoughPointsPopup" >
+  <div class="popup-content">
+    
+    {% for message in messages%}
+    <p>{{message}}</p>
+    {%endfor%}
+    
+    <button onclick="closePopup()" style="margin-top: 15px;">Close</button>
+    {%endif%}
+    {%endwith%}
+   
+  </div>
+</div>
 <script>
   function closePopup() {
-    document.getElementById("notEnoughPointsPopup").style.display = "none";
+    document.getElementById("notEnoughPointsPopup").style.display = "none";
   }
-  
+
   // Add event listener to the buy button
   document.querySelectorAll(".card-body button").forEach(button => {
-    button.addEventListener("click", function(event) {
-      // Check if user has enough points
-      const monId = parseInt(this.dataset.monId);
-      const pointsNeeded = parseInt(document.querySelector(`.card[data-mon-id="${monId}"] .card-text:last-child`).textContent.split(" ")[1]);
-      const userPoints = parseInt(document.querySelector(".nav-links a:last-child").textContent);
-      if (userPoints < pointsNeeded) {
-        event.preventDefault(); // Prevent form submission
-        document.getElementById("notEnoughPointsPopup").style.display = "block";
-      }
-    });
+    button.addEventListener("click", function(event) {
+      // Get the mon ID and points needed from the current card
+      const monId = parseInt(this.dataset.monId);
+      const pointsNeeded = parseInt(
+        document
+          .querySelector(`.card[data-mon-id="${monId}"] .card-text:last-child`)
+          .textContent.split(" ")[1]
+      );
+
+      // Get the user's points from the navigation bar
+      const userPoints = parseInt(
+        document.querySelector(".nav-links a:last-child").textContent
+      );
+
+      // Check if user has enough points
+      if (userPoints < pointsNeeded) {
+        event.preventDefault(); // Prevent form submission
+        document.getElementById("notEnoughPointsPopup").style.display = "block";
+      }
+    });
   });
-  
-  </script>
+</script>
 </body>
 </html>
 
