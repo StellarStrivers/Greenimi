@@ -5,6 +5,7 @@
 define r = Character(name="Reyna", image="reyna")
 
 label start:
+    play music "audio/ecoplay-bgs.mp3"
     scene bg city
     show reyna sad at left
     "As the sun painted the city in warm shades, a small child was running along the house, helping her parents to pack"

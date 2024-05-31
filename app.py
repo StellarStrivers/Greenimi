@@ -140,6 +140,7 @@ def buy_mon():
     if mon and current_user.points >= mon.points:
         current_user.points -= mon.points
         db.session.commit()
+        flash("Congratulations, you bought a GreeniMon!!")
         return redirect(url_for('shop'))
     else:
         # You can add logic to save the purchase if needed
