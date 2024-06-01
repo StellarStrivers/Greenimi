@@ -8,11 +8,12 @@
 
 ## How to Use 
 1. Clone Github Repository
-2. Go to command prompt and change sirectory to the cloned repository folder and enter `pip install requirements.txt`
-3. Open with a code editor like VSCode
-4. Open `app.py` file
-5. Click on run, where you will see a server link like 125.0.0 in the terminal
-6. Click on the link and check out the website
+2. Check if you have python installed. If not, install python
+3. Go to command prompt and change sirectory to the cloned repository folder and enter `pip install requirements.txt`
+4. Open with a code editor like VSCode
+5. Open `app.py` file
+6. Click on run, where you will see a server link like 125.0.0 in the terminal
+7. Click on the link and check out the website
 
 ## Inspiration
 GreeniMi was born from the ideology of reward based gamification. Now, there is a rising awareness of what climate change is and the responsibilities associated with it. There are also certain resources to help people make more sustainable decisions. But often times, the roadmap is soon abandoned. This, we feel, is mainly tied with the fast paced lifestyle where everyone expects instant rewards
