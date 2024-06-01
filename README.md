@@ -25,7 +25,7 @@ Log In
 Monster Shop
 ![Mon Shop 0](static/IMG-20240531-WA0034.jpg) 
 ![Mon Shop 1](static/IMG-20240531-WA0033.jpg) 
-![Mon Shop 2]() 
+
 
 Tracker
 ![Tracker 1](static/IMG-20240531-WA0036.jpg) 
