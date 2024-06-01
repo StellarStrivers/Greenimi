@@ -14,7 +14,8 @@
 5. Open `app.py` file
 6. Click on run, where you will see a server link like 125.0.0 in the terminal
 7. Click on the link and check out the website
-
+## Images
+![Sign up](static/IMG-20240531-WA0031.jpg) 
 ## Inspiration
 GreeniMi was born from the ideology of reward based gamification. Now, there is a rising awareness of what climate change is and the responsibilities associated with it. There are also certain resources to help people make more sustainable decisions. But often times, the roadmap is soon abandoned. This, we feel, is mainly tied with the fast paced lifestyle where everyone expects instant rewards
 
