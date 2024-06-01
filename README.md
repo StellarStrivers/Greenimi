@@ -33,9 +33,9 @@ Tracker
 ![Tracker 3](static/IMG-20240531-WA0038.jpg) 
 
 Game
-![Game 1]() 
-![Game 2]() 
-![Game 3]() 
+![Game 1](static/IMG_20240601_140400.jpg) 
+![Game 2](static/IMG_20240601_140435.jpg) 
+![Game 3](static/IMG_20240601_140416.jpg) 
 
 ## Inspiration
 GreeniMi was born from the ideology of reward based gamification. Now, there is a rising awareness of what climate change is and the responsibilities associated with it. There are also certain resources to help people make more sustainable decisions. But often times, the roadmap is soon abandoned. This, we feel, is mainly tied with the fast paced lifestyle where everyone expects instant rewards
