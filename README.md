@@ -15,22 +15,22 @@
 6. Click on run, where you will see a server link like 125.0.0 in the terminal
 7. Click on the link and check out the website
 ## Images 
-Home Page 
-![Home Page]() 
+
 Sign Up
 ![Sign Up](static/IMG-20240531-WA0031.jpg) 
 
 Log In
-![Log In]() 
+![Log In](static/IMG-20240531-WA0032.jpg) 
 
 Monster Shop
-![Mon Shop 1]() 
+![Mon Shop 0](static/IMG-20240531-WA0034.jpg) 
+![Mon Shop 1](static/IMG-20240531-WA0033.jpg) 
 ![Mon Shop 2]() 
 
 Tracker
-![Tracker 1]() 
-![Tracker 2]() 
-![Tracker 3]() 
+![Tracker 1](static/IMG-20240531-WA0036.jpg) 
+![Tracker 2](static/IMG-20240531-WA0037.jpg) 
+![Tracker 3](static/IMG-20240531-WA0038.jpg) 
 
 Game
 ![Game 1]() 
